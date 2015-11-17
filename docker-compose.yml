@@ -3,7 +3,7 @@ etcd:
   net: "host"
   command: /usr/local/bin/etcd --addr=127.0.0.1:4001 --bind-addr=0.0.0.0:4001 --data-dir=/var/etcd/data
 master:
-  image: gcr.io/google_containers/hyperkube:v1.0.7
+  image: gcr.io/google_containers/hyperkube:v1.1.1
   net: "host"
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
@@ -17,7 +17,7 @@ master:
   privileged: true
   pid: "host"
 proxy:
-  image: gcr.io/google_containers/hyperkube:v1.0.7
+  image: gcr.io/google_containers/hyperkube:v1.1.1
   net: "host"
   privileged: true
   command: /hyperkube proxy --master=http://127.0.0.1:8080 --v=2
