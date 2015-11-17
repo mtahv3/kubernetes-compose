@@ -9,7 +9,7 @@ To get Kubernets running locally on Mac OSX, follow the below steps and it shoul
 
 ### Install Kubectl
 
-Next we need to get the Kubectl binary installed locally.
+First we need to get the Kubectl binary installed locally.
 
 ```sh
 $ curl -O https://storage.googleapis.com/kubernetes-release/release/v1.1.1/bin/darwin/amd64/kubectl
@@ -55,6 +55,8 @@ $ kubectl get nodes
 NAME        LABELS                             STATUS    AGE
 127.0.0.1   kubernetes.io/hostname=127.0.0.1   Ready     17m
 ```
+
+_Note: it may take a few seconds for Kubernetes to get everything up and running. If you see issues about not being able to connect on 127.0.0.1 or EOF, wait a few seconds and try again._
 
 ### Shortcuts
 
